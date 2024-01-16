@@ -28,4 +28,9 @@
     <string name="tax">Tax: %s</string>
     <string name="total">Total: %s</string>
     <string name="submit">Submit</string>
+    <string name="entree">Entree menu</string>
+    <string name="side_dish">Side dish menu</string>
+    <string name="accompaniment">Accompaniment menu</string>
+    <string name="checkout">Checkout</string>
+    <string name="start">Start</string>
 </resources>

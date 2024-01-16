@@ -22,5 +22,8 @@ data class OrderUiState(
     val accompaniment: MenuItem.AccompanimentItem? = null,
     val itemTotalPrice: Double = 0.0,
     val orderTax: Double = 0.0,
-    val orderTotalPrice: Double = 0.0
+    val orderTotalPrice: Double = 0.0,
+    val entreeOptions: List<MenuItem.EntreeItem> = listOf(),
+    val sideDishOptions: List<MenuItem.SideDishItem> = listOf(),
+    val accompanimentOptions: List<MenuItem.AccompanimentItem> = listOf()
 )

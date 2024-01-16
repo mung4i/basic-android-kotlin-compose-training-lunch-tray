@@ -26,12 +26,19 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
 import java.text.NumberFormat
+import com.example.lunchtray.datasource.DataSource
 
 class OrderViewModel : ViewModel() {
 
     private val taxRate = 0.08
 
-    private val _uiState = MutableStateFlow(OrderUiState())
+    private val state = OrderUiState(
+        entreeOptions = DataSource.entreeMenuItems,
+        sideDishOptions = DataSource.sideDishMenuItems,
+        accompanimentOptions = DataSource.accompanimentMenuItems
+    )
+
+    private val _uiState = MutableStateFlow(state)
     val uiState: StateFlow<OrderUiState> = _uiState.asStateFlow()
 
     fun updateEntree(entree: EntreeItem) {
